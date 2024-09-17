@@ -10,9 +10,9 @@ class Program
             new Developer("Pedro", 3),
             new Developer("Fran", 1),
             new Developer("Davide", 0),
-            new Developer("Sergio", 2),
+            new Developer("Sergio", 1),
             new Developer("Jorge", 1),
-            new Developer("Toni", 2)
+            new Developer("Toni", 0)
         }, new Fridge(10));
     }
 }

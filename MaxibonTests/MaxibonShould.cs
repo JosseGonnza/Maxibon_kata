@@ -16,14 +16,14 @@ public class MaxibonShould
             new Developer("Fran", 1),
             new Developer("Davide", 0),
             new Developer("Sergio", 2),
-            new Developer("Jorge", 1),
-            new Developer("Toni", 2)
+            new Developer("Jorge", 3),
+            new Developer("Toni", 3)
         };
 
         //Act
         var result = KarumiHQ.OpenFridge(developers, fridge);
 
         //Assert
-        result.Should().Be("Maxibons left: 10");
+        result.Should().Be(7);
     }
 }

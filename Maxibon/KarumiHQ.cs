@@ -2,17 +2,19 @@ namespace ConsoleApp1;
 
 public class KarumiHQ
 {
-    public static string OpenFridge(List<Developer> developers, Fridge fridge)
+    public static int OpenFridge(List<Developer> developers, Fridge fridge)
     {
-        foreach (var developer in developers)
+        var maxibonsLeft = 0;
+        foreach (Developer dev in developers)
         {
-            fridge.Maxibons -= developer.NumberOfMaxibons;
-            if (fridge.Maxibons <= 2)
+            maxibonsLeft = fridge.Maxibons -= dev.NumberOfMaxibons;
+            if (maxibonsLeft <= 2)
             {
-                Console.WriteLine($"Hi guys, I'm {developer.Name}. We need more maxibons!");
-                fridge.Maxibons += 10;
+                Console.WriteLine($"Hi guys, I'm {dev.Name}. We need more maxibons!");
+                maxibonsLeft = 10;
             }
         }
-        return $"Maxibons left: {fridge.Maxibons}";
+        Console.WriteLine($"We have {maxibonsLeft} maxibones left");
+        return maxibonsLeft;
     }
 }
